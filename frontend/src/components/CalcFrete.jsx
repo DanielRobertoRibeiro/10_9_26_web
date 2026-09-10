@@ -89,6 +89,9 @@ const CalcFrete = () => {
         {valorFrete !== null && (
           <div className="mt-6 p-4 bg-blue-100 border border-blue-200 rounded-lg">
             <h2 className="text-2xl font-semibold text-blue-800">Valor do Frete: R$ {valorFrete}</h2>
+            <h3 className="text-lg font-semibold text-gray-700 mb-4">
+              Para distâncias acima de 50 km, será aplicado um acréscimo de 20% no valor do frete.
+            </h3>
           </div>
         )}
       </div>
