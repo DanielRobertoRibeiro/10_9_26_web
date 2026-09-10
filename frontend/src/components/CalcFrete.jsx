@@ -70,6 +70,8 @@ const CalcFrete = () => {
               <option value="bicicleta">Bicicleta</option>
               <option value="carro">Carro</option>
               <option value="drone">Drone</option>
+              <option value="aviao">Aviao</option>
+              <option value="van">Van</option>
             </select>
           </div>
 

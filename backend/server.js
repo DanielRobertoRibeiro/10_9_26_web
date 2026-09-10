@@ -11,6 +11,8 @@ const precos = {
     bicicleta: 0.75, 
     carro: 0.25,
     drone:1.00,
+    aviao:5.00,
+    van:2.00,
 }
 
 app.post('/calcularfrete', (req,res)=>{
@@ -24,7 +26,11 @@ app.post('/calcularfrete', (req,res)=>{
     if (precoPorKm === undefined) {
         return res.status(400).json({ error: 'Tipo de transporte inválido.' });
     }   
-    const valorTotal = distancia * precoPorKm;
+    let valorTotal = distancia * precoPorKm;
+    
+    if (distancia >50){
+        valorTotal = valorTotal*1.2
+    }
     
     return res.json({ valorTotal: valorTotal.toFixed(2) });
 });
